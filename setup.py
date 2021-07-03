@@ -14,7 +14,7 @@ from tensorflow.keras.preprocessing.image import array_to_img
 import cv2
 
 from flask import Flask
-import keras
+import tensorflow.keras
 
 #app.py
 from flask import Flask, flash, request, redirect, url_for, render_template
