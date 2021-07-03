@@ -3,4 +3,4 @@ flask==1.1.4
 flask-ngrok==0.0.25
 tensorflow==2.5.0
 numpy==1.19.5
-tensorflow.keras
+
