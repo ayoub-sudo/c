@@ -3,7 +3,7 @@ import numpy as np
 import glob
 import tensorflow
 import flask
-import ngrok
+
 
 
 from tensorflow.keras.models import *
@@ -14,8 +14,6 @@ from tensorflow.keras.preprocessing.image import array_to_img
 import cv2
 
 from flask import Flask
-from flask_ngrok import run_with_ngrok
-from gevent.pywsgi import WSGIServer 
 import keras
 
 #app.py
@@ -71,6 +69,5 @@ def display_image(filename):
 
 
 if __name__ == "__main__":
-    run_with_ngrok(app)
     app.run()
  
