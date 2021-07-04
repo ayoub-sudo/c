@@ -1,5 +1,4 @@
-cv2
-glob
+opencv-python
 flask==1.1.4
 keras
 numpy==1.19.5
