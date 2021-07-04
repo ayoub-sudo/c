@@ -1,6 +1,6 @@
 
 flask==1.1.4
-
+keras.application
 keras
 numpy==1.19.5
 gunicorn==19.9.0
