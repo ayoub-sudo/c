@@ -1,4 +1,4 @@
-from keras.preprocessing.image import img_to_array, load_img
+from tensorflow.keras.preprocessing.image import img_to_array, load_img
 import numpy as np
 import glob
  
@@ -7,15 +7,15 @@ import flask
 
 from tensorflow.keras.optimizers import SGD
 
-from keras.models import *
-from keras.layers import *
-from keras.optimizers import *
-from keras.callbacks import ModelCheckpoint
-from keras.preprocessing.image import array_to_img
+from tensorflow.keras.models import *
+from tensorflow.keras.layers import *
+from tensorflow.keras.optimizers import *
+from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.preprocessing.image import array_to_img
 import cv2
 
 from flask import Flask
-import keras
+
 #app.py
 from flask import Flask, flash, request, redirect, url_for, render_template
 import urllib.request
