@@ -3,4 +3,4 @@ flask==1.1.4
 tensorflow-cpu
 numpy==1.19.5
 gunicorn==19.9.0
-opencv-python-headless==4.2.0
+opencv-python-headless
