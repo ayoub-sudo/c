@@ -5,6 +5,7 @@ import glob
 import flask
 
 
+from tensorflow.keras.optimizers import SGD
 
 from keras.models import *
 from keras.layers import *
