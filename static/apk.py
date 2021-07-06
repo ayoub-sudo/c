@@ -1,4 +1,4 @@
-
+import tensorflow
 class dataProcess(object):
     def __init__(self, out_rows, out_cols, data_path="./data/train/images", label_path="./data/train/labels",
                  test_path="./static/uploads", npy_path="./data/npydata", img_type="jpg"):
