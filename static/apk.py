@@ -1,3 +1,4 @@
+import os
 import tensorflow
 class dataProcess(object):
     def __init__(self, out_rows, out_cols, data_path="./data/train/images", label_path="./data/train/labels",
