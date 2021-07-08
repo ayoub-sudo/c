@@ -27,9 +27,9 @@ application = Flask(__name__)
  
 UPLOAD_FOLDER = './static/uploads/'
  
-app.secret_key = "secret key"
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+application.secret_key = "secret key"
+application.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+application.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
  
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
  
@@ -37,11 +37,11 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
      
  
-@app.route('/')
+@application.route('/')
 def home():
     return render_template('index.html')
  
-@app.route('/', methods=['POST'])
+@application.route('/', methods=['POST'])
 def upload_image():
     if 'file' not in request.files:
         flash('No file part')
@@ -52,7 +52,7 @@ def upload_image():
         return redirect(request.url)
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        file.save(os.path.join(application.config['UPLOAD_FOLDER'], filename))
         #print('upload_image filename: ' + filename)
         flash('Image successfully uploaded and displayed below')
         apk = open(r'./static/apk.py', 'r').read()
@@ -61,7 +61,7 @@ def upload_image():
         flash('Allowed image types are - png, jpg, jpeg, gif')
         return redirect(request.url)
  
-@app.route('/display/<filename>')
+@application.route('/display/<filename>')
 def display_image(filename):
     print('display_image filename: ' + filename)
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
@@ -69,5 +69,5 @@ def display_image(filename):
 
 
 if __name__ == "__main__":
-     app.run(host='0.0.0.0' , port=8080)
+     application.run(host='0.0.0.0' , port=8080)
  
