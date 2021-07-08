@@ -23,7 +23,7 @@ import urllib.request
 import os
 from werkzeug.utils import secure_filename
  
-app = Flask(__name__)
+application = Flask(__name__)
  
 UPLOAD_FOLDER = './static/uploads/'
  
