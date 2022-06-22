@@ -1,6 +1,6 @@
 opencv-python
 flask==1.1.4
 tensorflow-cpu
-numpy==1.19.5
+numpy==1.22.0
 gunicorn==19.9.0
 opencv-python-headless
